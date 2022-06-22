@@ -15,13 +15,13 @@ public class IntegerPrimitives {
 	}
 
 	public static int getLenghthByte() {
-		int lenght = 0;
-		int number = 1;
-		while (number <= -(getMinByte() - getMinByte())) {
-			number = number * 2;
-			lenght++;
+		byte res = 1;
+		int count = 1;
+		while (res > 0) {
+			res = (byte) (res * 2);
+			count++;
 		}
-		return lenght / 8;
+		return count / 8;
 	}
 
 	public static char getMaxChar() {
@@ -37,8 +37,13 @@ public class IntegerPrimitives {
 	}
 
 	public static int getLenghthChar() {
-		// TODO Auto-generated method stub
-		return -1;
+		char res = 1;
+		int count = 1;
+		while (res > 0) {
+			res = (char) (res * 2);
+			count++;
+		}
+		return count / 8;
 	}
 
 	public static short getMaxShort() {
@@ -54,8 +59,13 @@ public class IntegerPrimitives {
 	}
 
 	public static int getLenghthShort() {
-		// TODO Auto-generated method stub
-		return -1;
+		short res = 1;
+		int count = 1;
+		while (res > 0) {
+			res = (short) (res * 2);
+			count++;
+		}
+		return count / 8;
 	}
 
 	public static int getMaxInt() {
@@ -71,8 +81,13 @@ public class IntegerPrimitives {
 	}
 
 	public static int getLenghthInt() {
-		// TODO Auto-generated method stub
-		return -1;
+		int res = 1;
+		int count = 1;
+		while (res > 0) {
+			res = res * 2;
+			count++;
+		}
+		return count / 8;
 	}
 
 	public static long getMaxLong() {
@@ -88,17 +103,27 @@ public class IntegerPrimitives {
 	}
 
 	public static int getLenghthLong() {
-		// TODO Auto-generated method stub
-		return -1;
+		long res = 1;
+		int count = 1;
+		while (res > 0) {
+			res = (long) (res * 2);
+			count++;
+		}
+		return count / 8;
+
 	}
 
 	// как можно передать тип переменной в аргументе функции???
 	// как выводить результат в консоль?
 
 	private static int getLenght(long x) {
-		// TODO
-
-		return -1;
+		long value = 1;
+		int count = 1;
+		while (value < x && value > 0) {
+			value *= 2;
+			count++;
+		}
+		return count / 8;
 	}
 
 }
